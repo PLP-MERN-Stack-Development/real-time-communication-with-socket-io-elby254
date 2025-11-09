@@ -36,8 +36,8 @@ export const useSocket = () => {
   };
 
   // Send a message
-  const sendMessage = (message) => {
-    socket.emit('send_message', { message });
+  const sendMessage = (msg) => {
+  socket.emit('send_message', msg); // send the object directly: { sender, message }
   };
 
   // Send a private message
